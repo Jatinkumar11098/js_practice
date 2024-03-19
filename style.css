@@ -135,7 +135,7 @@ table {
 }
 
 /* -------------------------------------------------------------------------------- */
-body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
+body .main_heading {
+    font-family: "BioRhyme", serif;
+    font-weight: 700;
 }
