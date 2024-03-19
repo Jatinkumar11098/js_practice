@@ -5,18 +5,15 @@
 //     }
 // }
 let count = 0;
-let maxGuess = parseInt(prompt("WELCOME! Enter your max number"));
-// console.log(typeof (maxGuess))
-let random = Math.floor((Math.random() * maxGuess) + 1);
-console.log(random)
-let firstGuess = prompt("Enter your first guess!!");
-// console.log(typeof (firstGuess));
-while (maxGuess !== firstGuess) {
-    if (firstGuess > maxGuess) {
-        prompt("Too high");
-    }
+let max = parseInt(prompt("Welcome, Enter your max"));
+let guess_max = Math.floor((Math.random() * max) + 1);
+let guess = parseInt(prompt("Enter your guess"));
+while (guess !== guess_max) {
+    if (guess > max)
+        guess = parseInt(prompt("Too high!!, Try again!!"));
     else {
-        prompt("Too low");
+        guess = parseInt(prompt("Too Low, Try again!!"));
     }
-    console.log('You win ')
+    count += 1;
 }
+console.log(`You got right answer with ${count} times`)
