@@ -138,4 +138,5 @@ table {
 body .main_heading {
     font-family: "BioRhyme", serif;
     font-weight: 700;
+    text-transform: capitalize;
 }
