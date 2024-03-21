@@ -67,25 +67,25 @@
 
 
 let item;
-let choice = prompt("What would you want to do?");
+let choice = prompt("What would you want to do? (add, remove, list or quit)");
 const toDoArray = [];
 while (choice !== 'quit' && choice !== 'q') {
-    choice = prompt("Choose between add, remove, list, quit");
+    choice = prompt("Choose action ---> add, remove, list, quit");
     if (choice === 'add') {
         item = prompt('Enter item to add');
         toDoArray.push(item);
         console.log(`${item} has added to the list`);
     }
     else if (choice === 'list') {
-        console.log('***************');
+        console.log('<------------------------->');
         for (let value of toDoArray) {
             console.log(`${toDoArray.indexOf(value)}: ${value}`);
         }
-        console.log('***************');
+        console.log('<------------------------->');
     }
     else if (choice === 'remove') {
-        let index = prompt('Enter the index you want to remove');
-        console.log(`${toDoArray[index]} at index ${index} is removed from the list`);
+        let index = prompt('Enter the index[ ] you want to remove');
+        console.log(`'${toDoArray[index]}' at index [${index}] is  removed from the list`);
         toDoArray.splice(index, 1);
         console.log(toDoArray);
 
