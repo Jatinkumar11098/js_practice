@@ -91,3 +91,5 @@ while (choice !== 'quit' && choice !== 'q') {
 
     }
 }
+
+// Starting functions
