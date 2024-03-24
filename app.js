@@ -94,13 +94,14 @@
 
 // Starting functions
 // high order functions 
-function callMe(func) {
-    func();
-    func();
-}
+// function callMe(func) {
+//     func();
+//     func();
+// }
 
-function returnSomeThing() {
-    console.log("Hello My name is jatin");
-}
+// function returnSomeThing() {
+//     console.log("Hello My name is jatin");
+// }
 
-callMe(returnSomeThing); 
+// callMe(returnSomeThing);
+// learning this keyword
