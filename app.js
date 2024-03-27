@@ -94,6 +94,11 @@
 
 // Starting functions
 // high order functions 
+function isBetween(min, max) {
+    return function (num) {
+        return num >= min && num <= max;
+    }
+}
 // function callMe(func) {
 //     func();
 //     func();
