@@ -99,14 +99,30 @@ function isBetween(min, max) {
         return num >= min && num <= max;
     }
 }
-// function callMe(func) {
-//     func();
-//     func();
-// }
+function callMe(func) {
+    func();
+    func();
+}
 
-// function returnSomeThing() {
-//     console.log("Hello My name is jatin");
-// }
+function returnSomeThing() {
+    console.log("Hello My name is jatin");
+}
 
-// callMe(returnSomeThing);
+callMe(returnSomeThing);
 // learning this keyword
+const pet = {
+    name: 'dog',
+    color: 'black',
+    bark() {
+        console.log(`${this.name} is barking!!!`);
+    }
+}
+// foreach loop as a array method 
+const arr = ['1', '2', '3'];
+for (let ele of arr) {
+    console.log(ele);
+}
+
+arr.forEach(function (ele) {
+    console.log(`${ele} is the element in the arr array`);
+})
