@@ -117,7 +117,7 @@ const pet = {
         console.log(`${this.name} is barking!!!`);
     }
 }
-// foreach loop as a array method 
+// foreach, map, arrow function as a array method 
 const arr = ['1', '2', '3'];
 for (let ele of arr) {
     console.log(ele);
@@ -126,3 +126,9 @@ for (let ele of arr) {
 arr.forEach(function (ele) {
     console.log(`${ele} is the element in the arr array`);
 })
+
+let array = arr.map((ele) => {
+    return ele * 2;
+})
+console.log(arr);
+console.log(array);
