@@ -132,3 +132,19 @@ let array = arr.map((ele) => {
 })
 console.log(arr);
 console.log(array);
+
+
+let arrow = function (num) {
+    return `${num} is in function expression`;
+}
+let arrow2 = (num) => {
+    return `${num} is in arrow function`;
+}
+let arrow3 = num => {
+    return `${num} is in arrow function with no brackets`;
+}
+let arrow4 = num => (
+    `${num} is in arrow function with no return keyword`
+)
+
+let arrow5 = num => `${num} is in implicit arrow function`
