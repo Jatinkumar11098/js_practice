@@ -148,3 +148,24 @@ let arrow4 = num => (
 )
 
 let arrow5 = num => `${num} is in implicit arrow function`
+
+
+// -----------------------------------------------------------------------
+// Simple function expression 
+let moreMusic01 = function (music) {
+    return `${music} is new music`;
+}
+// Simple arrow function 
+let moreMusic02 = (music) => {
+    return `${music} is new music`;
+}
+// No parantheis arrow funtion 
+let moreMusic03 = music => {
+    return `${music} is new music`;
+}
+// Implicit arrow function 
+let moreMusic04 = music => (
+    `${music} is new music`
+);
+// one liner arrow function
+let moreMusic05 = (music) => `${music} is new music`;
