@@ -135,3 +135,15 @@ table {
 }
 
 /* -------------------------------------------------------------------------------- */
+body {
+    height: 100dvh;
+}
+
+section {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+
+}
