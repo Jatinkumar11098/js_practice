@@ -147,3 +147,7 @@ section {
     height: 100dvh;
 
 }
+
+.card-title {
+    font-weight: 600;
+}
