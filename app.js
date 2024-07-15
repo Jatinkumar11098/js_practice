@@ -16,17 +16,21 @@ range.addEventListener('change', () => {
         }
         else console.log('counter is bigger');
     })
+    player2.addEventListener('click', () => {
+        counter2++;
+        if (counter2 <= value) {
+            score2.textContent = counter2;
+        }
+        else console.log('counter is bigger');
 
+    })
 
 
 })
 
 
 
-player2.addEventListener('click', () => {
-    counter2++;
-    score2.textContent = counter2;
-})
+
 
 reset.addEventListener('click', () => {
     alert('btn three is clicked');
