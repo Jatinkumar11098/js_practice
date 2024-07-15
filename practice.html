@@ -26,11 +26,19 @@
             <div class="card-body">
                 <h5 class="card-title">Ping Pong Score Keeper</h5>
                 <p class="display-4 fw-semibold"><span id="scrOne">0</span> to <span id="scrTwo">0</span> </p>
+                <div class="range">
+                    <select name="rnge" id="range-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
                 <p id="smallHeading">Use the buttons below to keep score.</p>
                 <div class="btns d-flex justify-content-around">
-                    <a href="#" class="btn btn-success flex-grow-1">+1 Player</a>
-                    <a href="#" class="btn btn-info flex-grow-1 mx-2">+2 Player</a>
-                    <a href="#" class="btn btn-danger flex-grow-1">Reset</a>
+                    <a href="#" id="b1" class=" button-1 btn btn-success flex-grow-1">+1 Player</a>
+                    <a href="#" id="b2" class=" button-2 btn btn-info flex-grow-1 mx-2">+2 Player</a>
+                    <a href="#" id="b3" class=" button-3 btn btn-danger flex-grow-1">Reset</a>
                 </div>
 
             </div>
