@@ -9,23 +9,31 @@ let counter2 = 0;
 
 range.addEventListener('change', () => {
     let value = parseInt(range.value);
+    let gameOver = false;
+
     player1.addEventListener('click', () => {
-        counter1++;
-        if (counter1 <= value) {
-            score1.textContent = counter1;
+        if (!gameOver) {
+            if (counter1 < value) {
+                counter1++;
+            }
+            else {
+                gameOver = true;
+                console.log('gameover')
+            }
         }
-        else console.log('counter is bigger');
+        score1.textContent = counter1;
     })
+
     player2.addEventListener('click', () => {
-        counter2++;
-        if (counter2 <= value) {
-            score2.textContent = counter2;
+        if (!gameOver) {
+            if (counter2 < value) {
+                counter2++;
+            } else {
+                gameOver = true;
+            }
         }
-        else console.log('counter is bigger');
-
+        score2.textContent = counter2;
     })
-
-
 })
 
 
