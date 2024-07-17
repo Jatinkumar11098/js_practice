@@ -41,5 +41,11 @@ range.addEventListener('change', () => {
 
 
 reset.addEventListener('click', () => {
-    alert('btn three is clicked');
+    counter1 = 0;
+    counter2 = 0;
+    score1.textContent = 0;
+    score2.textContent = 0;
+    gameOver = false;
+
+
 })
