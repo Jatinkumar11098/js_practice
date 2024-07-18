@@ -20,6 +20,8 @@ player1.addEventListener('click', () => {
             if (value !== 0 && counter1 !== 0) {
                 score1.classList.add('text-success');
                 score2.classList.add('text-danger');
+                player1.classList.add('disabled');
+                player2.classList.add('disabled');
             }
         }
     }
@@ -34,7 +36,9 @@ player2.addEventListener('click', () => {
             gameOver = true;
             if (value !== 0 && counter2 !== 0) {
                 score2.classList.add('text-success');
-                score1.classList.add('text-danger');
+                player2.classList.add('text-danger');
+                player1.classList.add('text-danger');
+
             }
 
         }
@@ -60,4 +64,6 @@ function resetFunc() {
     score1.classList.remove('text-danger');
     score1.classList.remove('text-success');
     score2.classList.remove('text-danger');
+    player1.classList.remove('disabled');
+    player2.classList.remove('disabled');
 }
