@@ -11,9 +11,11 @@ let value = 0;
 
 
 player1.addEventListener('click', () => {
+    score1.textContent = counter1;
     if (!gameOver) {
         if (counter1 !== value) {
             counter1++;
+
         }
         else {
             gameOver = true;
@@ -24,17 +26,21 @@ player1.addEventListener('click', () => {
                 player2.classList.add('disabled');
             }
         }
+
     }
-    score1.textContent = counter1;
+
+
 })
 
 player2.addEventListener('click', () => {
+    score2.textContent = counter2;
     if (!gameOver) {
         if (counter2 !== value) {
             counter2++;
         } else {
             gameOver = true;
             if (value !== 0 && counter2 !== 0) {
+                score1.classList.add('text-danger');
                 score2.classList.add('text-success');
                 player2.classList.add('text-danger');
                 player1.classList.add('text-danger');
@@ -42,8 +48,9 @@ player2.addEventListener('click', () => {
             }
 
         }
+
     }
-    score2.textContent = counter2;
+
 })
 
 range.addEventListener('change', () => {
