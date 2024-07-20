@@ -1,49 +1,51 @@
-const player1 = document.querySelector('.button-1');
-const player2 = document.querySelector('.button-2');
 const reset = document.querySelector('.button-3');
-const score1 = document.querySelector('#scrOne');
-const score2 = document.querySelector('#scrTwo');
 const range = document.querySelector('#rangeSelect');
-let counter1 = 0;
-let counter2 = 0;
 let gameOver = false;
 let value = 0;
+const player1 = {
+    counter1: 0,
+    button: document.querySelector('.button-1'),
+    display: document.querySelector('#scrOne'),
 
 
-player1.addEventListener('click', () => {
-    score1.textContent = counter1;
+}
+const player2 = {
+    counter2: 0,
+    button: document.querySelector('.button-2'),
+    display: document.querySelector('#scrTwo')
+}
+
+player1.button.addEventListener('click', () => {
+    player1.display.textContent = player1.counter1;
     if (!gameOver) {
-        if (counter1 !== value) {
-            counter1++;
+        if (player1.counter1 !== value) {
+            player1.counter1++;
 
         }
         else {
             gameOver = true;
-            if (value !== 0 && counter1 !== 0) {
-                score1.classList.add('text-success');
-                score2.classList.add('text-danger');
-                player1.classList.add('disabled');
-                player2.classList.add('disabled');
+            if (value !== 0 && player1.counter1 !== 0) {
+                player1.display.classList.add('text-success');
+                player2.display.classList.add('text-danger');
+                player1.button.classList.add('disabled');
+                player2.button.classList.add('disabled');
             }
         }
-
     }
-
-
 })
 
-player2.addEventListener('click', () => {
-    score2.textContent = counter2;
+player2.button.addEventListener('click', () => {
+    player2.display.textContent = player2.counter2;
     if (!gameOver) {
-        if (counter2 !== value) {
-            counter2++;
+        if (player2.counter2 !== value) {
+            player2.counter2++;
         } else {
             gameOver = true;
-            if (value !== 0 && counter2 !== 0) {
-                score1.classList.add('text-danger');
-                score2.classList.add('text-success');
-                player2.classList.add('text-danger');
-                player1.classList.add('text-danger');
+            if (value !== 0 && player2.counter2 !== 0) {
+                player1.display.classList.add('text-danger');
+                player2.display.classList.add('text-success');
+                player2.button.classList.add('disabled');
+                player1.button.classList.add('disabled');
 
             }
 
@@ -62,10 +64,10 @@ range.addEventListener('change', () => {
 reset.addEventListener('click', resetFunc)
 
 function resetFunc() {
-    counter1 = 0;
-    counter2 = 0;
-    score1.textContent = 0;
-    score2.textContent = 0;
+    player1.counter1 = 0;
+    player2.counter2 = 0;
+    player1.display.textContent = 0;
+    player2.display.textContent = 0;
     gameOver = false;
     score2.classList.remove('text-success');
     score1.classList.remove('text-danger');
