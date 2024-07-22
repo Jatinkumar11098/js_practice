@@ -69,10 +69,10 @@ function resetFunc() {
     player1.display.textContent = 0;
     player2.display.textContent = 0;
     gameOver = false;
-    score2.classList.remove('text-success');
-    score1.classList.remove('text-danger');
-    score1.classList.remove('text-success');
-    score2.classList.remove('text-danger');
-    player1.classList.remove('disabled');
-    player2.classList.remove('disabled');
+    player1.display.classList.remove('text-success');
+    player1.display.classList.remove('text-danger');
+    player2.display.classList.remove('text-success');
+    player2.display.classList.remove('text-danger');
+    player1.button.classList.remove('disabled');
+    player2.button.classList.remove('disabled');
 }
