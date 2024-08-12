@@ -59,18 +59,20 @@
 //     player2.button.classList.remove('disabled');
 // }
 
-const movies = (url, success, failure) => {
-    const delayTime = Math.floor(Math.random() * 4000) + 500;
-    console.log(delayTime)
-    if (delayTime > 4000) {
-        failure(url);
-    } else {
-        success(url);
-    }
-}
+// const movies = (url, success, failure) => {
+//     const delayTime = Math.floor(Math.random() * 4000) + 500;
+//     console.log(delayTime)
+//     if (delayTime > 4000) {
+//         failure(url);
+//     } else {
+//         success(url);
+//     }
+// }
 
-movies('books.com', (address) => {
-    console.log(`Congo!! its working, Here is your data from the ${address}`)
-}, (address) => {
-    console.log(`Error!!, Can't fetch your data from the ${address}`)
-}) 
+// movies('books.com', (response) => {
+//     console.log(`Congo!! its working, Here is your data from the ${response}`)
+// }, (err) => {
+//     console.log(`Error!!, Can't fetch your data from the ${err}`)
+// })
+
+
