@@ -74,5 +74,15 @@
 // }, (err) => {
 //     console.log(`Error!!, Can't fetch your data from the ${err}`)
 // })
+const colorDelay = (color, delay, resolve) => {
+    setTimeout(() => {
+        document.body.style.backgroundColor = color;
+        resolve && resolve();
+    }, delay)
+}
 
-
+colorDelay('red', 1000, () => {
+    colorDelay('blue', 1000, () => {
+        colorDelay('green', 1000,)
+    })
+})
