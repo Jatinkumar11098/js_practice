@@ -74,15 +74,33 @@
 // }, (err) => {
 //     console.log(`Error!!, Can't fetch your data from the ${err}`)
 // })
-const colorDelay = (color, delay, resolve) => {
-    setTimeout(() => {
-        document.body.style.backgroundColor = color;
-        resolve && resolve();
-    }, delay)
+// const colorDelay = (color, delay, resolve) => {
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = color;
+//         resolve && resolve();
+//     }, delay)
+// }
+
+// colorDelay('red', 1000, () => {
+//     colorDelay('blue', 1000, () => {
+//         colorDelay('green', 1000,)
+//     })
+// })
+
+//Using promise
+
+
+const fakePromise = (color, delay) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve('color changed');
+        }, delay)
+    })
 }
 
-colorDelay('red', 1000, () => {
-    colorDelay('blue', 1000, () => {
-        colorDelay('green', 1000,)
-    })
-})
+fakePromise('red', 1000)
+    .then(() => {
+        fakePromise('blue', 1000)
+    }
+    )
