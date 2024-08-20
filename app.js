@@ -90,17 +90,51 @@
 //Using promise
 
 
-const fakePromise = (color, delay) => {
-    return new Promise((resolve) => {
+// const fakePromise = (color, delay) => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = color;
+//             resolve('color changed');
+//         }, delay)
+//     })
+// }
+
+// fakePromise('red', 1000)
+//     .then(() => {
+//         fakePromise('blue', 1000)
+//     }
+//     )
+
+
+const fakePromiseRequest = (url) => {
+    return new Promise((resolve, reject) => {
+        const rand = Math.floor(Math.random() * 4500) + 1000;
+        console.log(rand);
         setTimeout(() => {
-            document.body.style.backgroundColor = color;
-            resolve('color changed');
-        }, delay)
+            if (rand < 4500) {
+                console.log('Successful!!');
+                resolve('Well connected!!');
+            }
+            reject('Sorry, connection lost !!')
+        }, 1000)
+
     })
 }
 
-fakePromise('red', 1000)
+fakePromiseRequest('books/page1')
     .then(() => {
-        fakePromise('blue', 1000)
-    }
-    )
+        console.log('Page 1 is successfully loaded !!')
+        return fakePromiseRequest('books/page2')
+    })
+    .then(() => {
+        console.log('Page 2 is successfully loaded !!')
+        return fakePromiseRequest('books/page3')
+    })
+    .then(() => {
+        console.log('Page 3 is successfully loaded !!')
+        return fakePromiseRequest('books/page4')
+    })
+    .catch(() => {
+        console.log('request failed!!')
+    })
+
