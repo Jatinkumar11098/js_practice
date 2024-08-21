@@ -121,20 +121,28 @@ const fakePromiseRequest = (url) => {
     })
 }
 
-fakePromiseRequest('books/page1')
-    .then(() => {
-        console.log('Page 1 is successfully loaded !!')
-        return fakePromiseRequest('books/page2')
-    })
-    .then(() => {
-        console.log('Page 2 is successfully loaded !!')
-        return fakePromiseRequest('books/page3')
-    })
-    .then(() => {
-        console.log('Page 3 is successfully loaded !!')
-        return fakePromiseRequest('books/page4')
-    })
-    .catch(() => {
-        console.log('request failed!!')
-    })
+// fakePromiseRequest('books/page1')
+//     .then(() => {
+//         console.log('Page 1 is successfully loaded !!')
+//         return fakePromiseRequest('books/page2')
+//     })
+//     .then(() => {
+//         console.log('Page 2 is successfully loaded !!')
+//         return fakePromiseRequest('books/page3')
+//     })
+//     .then(() => {
+//         console.log('Page 3 is successfully loaded !!')
+//         return fakePromiseRequest('books/page4')
+//     })
+//     .catch(() => {
+//         console.log('request failed!!')
+//     })
 
+async function fakecall() {
+    try {
+        let req = await fakePromiseRequest('books/page1')
+        let req2 = await fakePromiseRequest('books/page2')
+    } catch (e) {
+        console.log(e);
+    }
+}
