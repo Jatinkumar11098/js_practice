@@ -14,13 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
     <title>SCORE COUNTER</title>
 </head>
 
 <body>
     <section class="mainBlock">
-        <div class="card" style="width: 30rem;">
+        <!-- <div class="card" style="width: 30rem;">
             <img src="https://images.unsplash.com/photo-1628440501245-393606514a9e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="card-img-top" alt="">
             <div class="card-body">
@@ -40,8 +42,18 @@
                     <a href="#" id="b2" class=" button-2 btn btn-info flex-grow-1 mx-2">+2 Player</a>
                     <a href="#" id="b3" class=" button-3 btn btn-danger flex-grow-1">Reset</a>
                 </div>
-
             </div>
+        </div> -->
+        <div id="SearchMovie">
+            <form id="searchForm">
+                <input type="text" name="query">
+                <button>Submit</button>
+            </form>
+            <!-- <button id="btn">Joke</button>-->
+            <ul id="container">
+
+            </ul>
+
         </div>
     </section>
     <script src="app.js"></script>
